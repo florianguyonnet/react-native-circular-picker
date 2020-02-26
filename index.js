@@ -62,7 +62,7 @@ const CircularPicker = ({
   backgroundColor,
   stepColor,
   borderColor,
-  renderContent,
+  children,
   onChange,
 }) => {
   const [pos, setPos] = useState(percentToPos(defaultPos));
@@ -143,8 +143,8 @@ const CircularPicker = ({
       <G transform={{ translate: `${center + padding}, ${strokeWidth / 2 + padding}` }}>
         <Circle r={(strokeWidth) / 2} fill={backgroundColor} />
       </G>
-      {steps && steps.map((step) => (
-        <G transform={{ translate: `${step.x + padding}, ${step.y + padding}` }}>
+      {steps && steps.map((step, index) => (
+        <G transform={{ translate: `${step.x + padding}, ${step.y + padding}` }} key={index}>
           <Circle
             r={(strokeWidth / 2.5) / 2}
             fill={stepColor}
@@ -161,9 +161,9 @@ const CircularPicker = ({
           strokeWidth={padding / 1.5}
         />
       </G>
-      {renderContent && (
+      {children && (
         <View style={{ height: size, alignItems: 'center', justifyContent: 'center' }}>
-          <View>{renderContent()}</View>
+          <View>{children}</View>
         </View>
       )}
     </Svg>
@@ -182,7 +182,7 @@ CircularPicker.propTypes = {
   stepColor: PropTypes.string,
   borderColor: PropTypes.string,
   onChange: PropTypes.func,
-  renderContent: PropTypes.func,
+  children: PropTypes.any,
 };
 
 CircularPicker.defaultProps = {
@@ -196,7 +196,7 @@ CircularPicker.defaultProps = {
   stepColor: 'rgba(0, 0, 0, 0.2)',
   borderColor: 'rgb(255, 255, 255)',
   onChange: () => undefined,
-  renderContent: undefined,
+  children: null,
 };
 
 export default CircularPicker;

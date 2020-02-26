@@ -1,7 +1,7 @@
 {
   "name": "react-native-circular-picker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Apple Card circular picker component in react native.",
   "main": "index.js",
   "directories": {
     "example": "example"
@@ -13,8 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/florianguyonnet/react-native-circular-picker.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Florian Guyonnet",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/florianguyonnet/react-native-circular-picker/issues"
   },

@@ -19,14 +19,12 @@ export default () => {
           70: ['rgb(0, 122, 255)', 'rgb(10, 132, 255)'],
         }}
         onChange={handleChange}
-        renderContent={() => (
-          <>
-            <Text style={{ textAlign: 'center', fontSize: 24, marginBottom: 8 }}>{price} $</Text>
-            <Text style={{ textAlign: 'center' }}>Available balance 1000 $</Text>
-          </>
-        )}
-      />
+      >
+        <>
+          <Text style={{ textAlign: 'center', fontSize: 24, marginBottom: 8 }}>{price} $</Text>
+          <Text style={{ textAlign: 'center' }}>Available balance 1000 $</Text>
+        </>
+      </CircularPicker>
     </View>
   );
 }
-

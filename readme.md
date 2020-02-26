@@ -39,13 +39,12 @@ export default () => {
         70: ['rgb(0, 122, 255)', 'rgb(10, 132, 255)'],
       }}
       onChange={handleChange}
-      renderContent={() => (
-        <>
-          <Text style={{ textAlign: 'center', fontSize: 24, marginBottom: 8 }}>{price} $</Text>
-          <Text style={{ textAlign: 'center' }}>Available balance 2000 $</Text>
-        </>
-      )}
-    />
+    >
+      <>
+        <Text style={{ textAlign: 'center', fontSize: 24, marginBottom: 8 }}>{price} $</Text>
+        <Text style={{ textAlign: 'center' }}>Available balance 2000 $</Text>
+      </>
+    </CircularPicker>
   );
 }
 ```
@@ -54,7 +53,7 @@ export default () => {
 
 | Name                  | Default                                                | type       | description       |
 | ----------------------|--------------------------------------------------------|------------|-------------------|
-| size **(requiered)**  | -                                                      | number     | size of the component
+| size **(required)**   | -                                                      | number     | size of the component
 | strokeWidth           | 45                                                     | number     |
 | defaultPos            | 0                                                      | number     |
 | setps                 | []                                                     | [number]   |
@@ -63,7 +62,6 @@ export default () => {
 | stepColor             | ``'rgba(0, 0, 0, 0.2)'``                               | string     |
 | borderColor           | ``'rgb(255, 255, 255)'``                               | string     |
 | onChange              | (val) => undefined                                     | function   | value in percent
-| renderContent         | undefined                                              | component  |
 
 #### Setps
 
@@ -87,7 +85,6 @@ Gradients are defined by an object, the key is the starting percentage and the v
 ## @TODO
 - Animation with React Animated when you click on steps
 - Improve end bounding area
-
 
 ## Author
 
