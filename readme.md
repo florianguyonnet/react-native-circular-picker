@@ -1,4 +1,4 @@
-## react-native-circular-picker (WOP)
+## react-native-circular-picker (WIP)
 
 Apple Card circular picker component in react native.
 
