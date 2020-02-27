@@ -1,6 +1,6 @@
 {
   "name": "react-native-circular-picker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Apple Card circular picker component in react native.",
   "main": "index.js",
   "directories": {
