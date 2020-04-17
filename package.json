@@ -6,6 +6,17 @@
   "directories": {
     "example": "example"
   },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "progress",
+    "chart",
+    "react-svg",
+    "picker",
+    "apple cards",
+    "circular picker"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
