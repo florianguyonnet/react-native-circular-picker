@@ -146,6 +146,12 @@ const CircularPicker = ({
       {steps && steps.map((step, index) => (
         <G transform={{ translate: `${step.x + padding}, ${step.y + padding}` }} key={index}>
           <Circle
+            r={strokeWidth}
+            fill="transparent"
+            strokeWidth="12"
+            onPress={() => goToPercent(step.p)}
+          />
+          <Circle
             r={(strokeWidth / 2.5) / 2}
             fill={stepColor}
             strokeWidth="12"
