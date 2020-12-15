@@ -56,14 +56,14 @@ export default () => {
 | size **(required)**   | -                                                      | number     | size of the component
 | strokeWidth           | 45                                                     | number     |
 | defaultPos            | 0                                                      | number     |
-| setps                 | []                                                     | [number]   |
+| steps                 | []                                                     | [number]   |
 | gradients             | ``{ 0: ['rgb(255, 204, 0)', 'rgb(255, 214, 10)'] }``   | object     | 
 | backgroundColor       | ``'rgb(231, 231, 231)'``                               | string     |
 | stepColor             | ``'rgba(0, 0, 0, 0.2)'``                               | string     |
 | borderColor           | ``'rgb(255, 255, 255)'``                               | string     |
 | onChange              | (val) => undefined                                     | function   | value in percent
 
-#### Setps
+#### Steps
 
 You can defines clickable steps on the circle.
 steps are defined by an array of position (0 - 100).
