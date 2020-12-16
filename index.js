@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { PanResponder, View } from 'react-native';
 import PropTypes from 'prop-types';
 import Svg, {
@@ -73,6 +73,10 @@ const CircularPicker = ({
   const center = (radius + strokeWidth / 2);
 
   const gradient = selectGradient(gradients, pos);
+  
+  useEffect(()=>{
+    setPos(percentToPos(defaultPos));
+  }, [defaultPos]);
 
   if (steps) {
     steps = steps.map((p) => {
